@@ -945,7 +945,7 @@ export async function reply(req: Request, res: Response) {
   }
 }
 
-export async function forwardMessages(req: Request, res: Response) {
+export async function forwardMessage(req: Request, res: Response) {
   /**
      #swagger.tags = ["Messages"]
      #swagger.autoBody=false
@@ -986,13 +986,13 @@ export async function forwardMessages(req: Request, res: Response) {
     let response;
 
     if (!isGroup) {
-      response = await req.client.forwardMessages(
+      response = await req.client.forwardMessage(
         `${phone}`,
         [messageId],
         false
       );
     } else {
-      response = await req.client.forwardMessages(
+      response = await req.client.forwardMessage(
         `${phone}`,
         [messageId],
         false
