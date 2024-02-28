@@ -945,7 +945,7 @@ export async function reply(req: Request, res: Response) {
   }
 }
 
-export async function forwardMessage(req: Request, res: Response) {
+export async function forwardMessages(req: Request, res: Response) {
   /**
      #swagger.tags = ["Messages"]
      #swagger.autoBody=false
